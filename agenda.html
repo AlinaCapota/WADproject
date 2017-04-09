@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head>
+<link rel="stylesheet" href="ag.css"/>
+<script src="angular.min.js"></script>
+<script src="age.js"></script>
+  <meta charset="utf-8">
+  <title>Agenda</title>
+</head>
+<body ng-controller="HelloController">
+	<h1>Hello! This is your <i>agenda</i>! Feel free to add new contacts:</h1>
+	<form>
+		Nume    <input ng-model="nume"></br></br>
+		Prenume <input ng-model="prenume"></br></br>
+		Telefon <input ng-model="telefon"></br></br>
+		E-mail  <input ng-model="mail"></br></br>
+		<button ng-click="saveC()">Adauga-ma!</button>
+		<button ng-click="sortC()">Sorteaza-ma!</button>
+
+	</form>
+    <div ng-repeat="contact in contacte | orderBy:contact.nume">
+    	<strong>{{contact.nume}}</strong>
+    	<p>{{contact.prenume}}</p>
+    	
+    	
+    	<hello-world></hello-world>
+    </div>
+    
+</body>
+</html>
