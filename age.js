@@ -27,4 +27,8 @@ function Contact(nume,prenume,telefon,mail){
 
 
 }])
-	
+app.service("HelloService", ["$scope, $http", function($scope,$http){
+	//conectarea la db
+	//$http.post()
+}])
+	 
